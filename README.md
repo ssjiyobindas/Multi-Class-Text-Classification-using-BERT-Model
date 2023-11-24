@@ -1,59 +1,127 @@
-# Multi-Class-Text-Classification-using-BERT-Model
-Business Overview
-So far, in this series of NLP projects for our multiclass text classification problem, we
-have come across several algorithms such as; the Naïve Bayes algorithm, skip-gram
-model, Recurrent Neural Network (RNN), and Long Short-Term Memory (LSTM) as well
-as attention mechanism. All these models were built and implemented from scratch.
-In this particular project, we will be using a pre-trained model to predict our text known
-as BERT. BERT is an open-source ML framework for Natural Language Processing.
-BERT stands for Bidirectional Encoder Representations and is a pre-trained model from
-Google known for producing state-of-the-art results in a wide variety of NLP tasks.
-Aim
-To perform multiclass text classification on the dataset using the pre-trained BERT
-model.
-Data Description
-The dataset contains more than two million customer complaints about consumer
-financial products. Amongst the various available columns, we have a column that
-contains the actual text of the complaint and one column containing the product for
-which the customer is raising the complaint.
-Tech Stack
-➔ Language: Python
-➔ Libraries: pandas, torch, nltk, numpy, pickle, re, tqdm, sklearn, transformers
-Prerequisite
-1. The torch framework
-2. Multiclass Text Classification using Naive Bayes in Python
-3. Skip Gram Model Python Implementation for Word Embeddings
-4. Build Multi Class Text Classification Models with RNN and LSTM
-5. Build a Text Classification Model with Attention Mechanism NLP
-Approach
-1. Installing the necessary packages through the pip command
-2. Importing the required libraries
-3. Defining configuration file paths
-4. Process Text data
-▪ Read the CSV file and drop the null values
-▪ Replace duplicate labels
-▪ Encode the label column and save the encoder and encoded labels
-5. Data Preprocessing
-▪ Conversion to lower case
-▪ Punctuation removal
-▪ Digits removal
-▪ Remove more than one consecutive instance of 'x'
-▪ Additional spaces removal
-▪ Tokenize the text
-▪ Save the tokens
-6. Model Building
-▪ Create BERT model
-▪ Create a function for the PyTorch dataset
-▪ Function to train the model
-▪ Function to test the model
-7. Train BERT model
-▪ Load the files
-▪ Split data into train, test, and validation
-▪ Create PyTorch datasets
-▪ Create data loaders
-▪ Create model object
-▪ Define loss function and optimizer
-▪ Move the model to GPU if available
-▪ Training the model
-▪ Test the model
-8. Predictions of new text
+# NLP Project for Multi-Class Text Classification using BERT Model
+
+## Project Overview
+
+Welcome to our NLP project series, where we dive into advanced techniques for multiclass text classification. In this project, we harness the power of BERT (Bidirectional Encoder Representations) - an open-source ML framework by Google, renowned for delivering state-of-the-art results in various NLP tasks.
+
+## Business Overview
+
+In our journey through NLP algorithms, from Naïve Bayes to RNN and LSTM, we now embark on the efficiency of BERT for text classification. BERT's bidirectional encoding and pre-trained capabilities elevate our project to new heights of accuracy and performance.
+
+## Aim
+
+Our goal is to leverage the pre-trained BERT model for multiclass text classification, utilizing a dataset containing over two million customer complaints about consumer financial products.
+
+## Data Description
+
+The dataset includes customer complaints with corresponding product categories. Our objective is to predict product categories based on the text of the complaints.
+
+## Tech Stack
+
+- **Language:** Python
+- **Libraries:** pandas, torch, nltk, numpy, pickle, re, tqdm, sklearn, transformers
+
+## Prerequisite
+
+Before diving in, ensure you have the required packages installed. Refer to the `requirements.txt` file for the specific libraries and versions needed.
+
+## Approach
+
+1. **Installing Necessary Packages:**
+   - Use the pip command to install required packages.
+
+2. **Importing Required Libraries:**
+   - Set the stage by importing essential libraries.
+
+3. **Defining Configuration File Paths:**
+   - Establish paths for configuration files.
+
+4. **Processing Text Data:**
+   - Read and preprocess the CSV file.
+   - Handle null values, duplicate labels, and encode labels.
+
+5. **Data Preprocessing:**
+   - Convert text to lowercase.
+   - Remove punctuation, digits, consecutive instances of 'x', and extra spaces.
+   - Tokenize the text and save tokens.
+
+6. **Model Building:**
+   - Create the BERT model.
+   - Define PyTorch dataset functions.
+   - Implement functions for model training and testing.
+
+7. **Train BERT Model:**
+   - Load files and split data.
+   - Create PyTorch datasets and data loaders.
+   - Define the model, loss function, and optimizer.
+   - Train the model and test its performance.
+
+8. **Predictions of New Text:**
+   - Make predictions on new text data using the trained model.
+
+## Modular Code Overview
+
+Upon unzipping the `modular_code.zip` file, you'll find folders:
+
+1. **Input:**
+   - Contains the analysis data, in this case, `complaints.csv`.
+
+2. **Output:**
+   - Contains essential files for model training:
+     - `bert_pre_trained.pth`
+     - `label_encoder.pkl`
+     - `labels.pkl`
+     - `tokens.pkl`
+
+3. **Source:**
+   - Holds modularized code in Python files for better organization:
+     - `model.py`
+     - `data.py`
+     - `utils.py`
+
+4. **Config:**
+   - `config.py` file with project configurations.
+
+5. **Engine:**
+   - `Engine.py` is the main file for running the entire code, training the model, and saving it in the output folder.
+
+6. **Notebook:**
+   - `bert.ipynb` is the original notebook used in the development.
+
+7. **Processing and Predictions:**
+   - `processing.py` processes the data.
+   - `predict.py` makes predictions on the data.
+
+8. **README and Requirements:**
+   - `README.md` provides detailed instructions, and `requirements.txt` lists necessary libraries.
+
+## Project Takeaways
+
+1. **Understanding the Business Problem:**
+   - Grasping the intricacies of multiclass text classification.
+
+2. **Exploring Pre-trained Models:**
+   - Introduction to the concept and significance of pre-trained models.
+
+3. **BERT Model Insights:**
+   - Understanding the architecture and functioning of BERT.
+
+4. **Data Preparation Techniques:**
+   - Handling spaces, digits, and punctuation for effective model input.
+
+5. **BERT Tokenization:**
+   - Implementing BERT tokenization for text processing.
+
+6. **Model Architecture and Training:**
+   - Creating and training the BERT model using CUDA or CPU.
+
+7. **Predictions on New Text Data:**
+   - Applying the trained model for predictions on unseen text data.
+
+## Additional Information
+
+Feel free to explore the `modular_code.zip` for organized code snippets. The project provides a seamless experience with pre-trained models, ensuring quick and efficient use without the need to retrain from scratch.
+
+For a more hands-on experience, refer to the `bert.ipynb` notebook and follow the instructions in the `README.md` file for detailed guidance.
+
+Happy coding! 🚀✨
