@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Welcome to our NLP project series, where we dive into advanced techniques for multiclass text classification. In this project, we harness the power of BERT (Bidirectional Encoder Representations) - an open-source ML framework by Google, renowned for delivering state-of-the-art results in various NLP tasks.
+ This project dives into advanced techniques for multiclass text classification. In this project, we harness the power of BERT (Bidirectional Encoder Representations) - an open-source ML framework by Google, renowned for delivering state-of-the-art results in various NLP tasks.
 
 ## Business Overview
 
